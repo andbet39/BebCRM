@@ -1,0 +1,24 @@
+<p>This is the reservation view.</p>
+
+
+ <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div> 
+
+<table class="table">
+<thead>
+	<th>ResCode</th>
+	<th>Check-in</th>
+	<th>Check-out</th>
+	<th>Price</th>
+	<th>status</th>
+</thead>
+<tr ng-repeat="res in reservations">
+	<td>{{res.reservation_code}}</td>
+	<td>{{res.date_arrival | amDateFormat:' MMMM Do YYYY'}}</td>
+	<td>{{res.date_departure | amDateFormat:' MMMM Do YYYY'}}</td>
+	<td>{{res.customer_name + " "+ rescustomer_surname}}</td>
+	<td>{{res.amount}}</td>
+	<td>{{res.status}}</td>
+</tr>
+	
+</table>
+
