@@ -286,7 +286,21 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
   // pages
   $stateProvider
 
-    // Dashboard
+  .state('/reservation_detail', {
+      url: "/reservation_detail/:id",
+      templateUrl: "views/reservation_detail.html",
+      controller: "ReservationDetailCtrl",
+      data: {
+        pageTitle: 'Reservation page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Reservation',
+          href: '#/reservation.html'
+        }]
+      }
+    })
     .state('/reservation', {
       url: "/reservation.html",
       templateUrl: "views/reservation.html",

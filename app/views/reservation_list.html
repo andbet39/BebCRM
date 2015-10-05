@@ -3,6 +3,7 @@
 
   <table datatable="ng" class="row-border hover">
    <thead>
+    <th></th>
     <th>Check-in</th>
     <th>Check-out</th>
     <th>Guest</th>
@@ -12,6 +13,7 @@
    </thead>
     <tbody>
         <tr ng-repeat="res in reservations">
+          <td><a ng-href="#/reservation_detail/{{res.reservation_code}}">{{res.reservation_code}}</a></td>
           <td>{{res.date_arrival | amDateFormat:'D-M-YYYY'}}</td>
           <td>{{res.date_departure | amDateFormat:'D-M-YYYY'}}</td>
           <td>{{res.customer_name + " "+ res.customer_surname}}</td>
