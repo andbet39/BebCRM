@@ -1,0 +1,24 @@
+<div class="card-panel">
+  <h4>With Search</h4>
+
+  <table datatable="ng" class="row-border hover">
+   <thead>
+    <th>Check-in</th>
+    <th>Check-out</th>
+    <th>Guest</th>
+    <th>Phone</th>
+    <th>Price</th>
+    <th>Rooms</th>
+   </thead>
+    <tbody>
+        <tr ng-repeat="res in reservations">
+          <td>{{res.date_arrival | amDateFormat:'D-M-YYYY'}}</td>
+          <td>{{res.date_departure | amDateFormat:'D-M-YYYY'}}</td>
+          <td>{{res.customer_name + " "+ res.customer_surname}}</td>
+          <td>{{res.customer_phone}}</td>
+          <td>{{res.amount}}</td>
+          <td>{{res.rooms}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>

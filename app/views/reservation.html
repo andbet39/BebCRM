@@ -1,27 +1,3 @@
-<p>This is the reservation view.</p>
+<div class="page-title" data-ng-include="'tpl/parts/breadcrumbs.html'"></div>
 
-
- <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
-
-<table class="table">
-<thead>
-	<th>ResCode</th>
-	<th>Check-in</th>
-	<th>Check-out</th>
-	<th>Guest</th>
-	<th>Price</th>
-	<th>status</th>
-  <th>Rooms</th>
-</thead>
-<tr ng-repeat="res in reservations">
-	<td>{{res.reservation_code}}</td>
-	<td>{{res.date_arrival | amDateFormat:' MMMM Do YYYY'}}</td>
-	<td>{{res.date_departure | amDateFormat:' MMMM Do YYYY'}}</td>
-	<td>{{res.customer_name + " "+ res.customer_surname}}</td>
-	<td>{{res.amount}}</td>
-	<td>{{res.status}}</td>
-  <td><room room-list="roomList" room="res.rooms"></room></td>
-</tr>
-
-</table>
-
+<div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
