@@ -8,41 +8,36 @@
  * Controller of the bebCrmApp
  */
 angular.module('bebCrmApp')
-  .controller('ReservationCtrl', function (Reservation,$scope,uiCalendarConfig) {
-    
+  .controller('ReservationCtrl', function (Reservation,$scope,uiCalendarConfig,Room) {
+
     	$scope.reservations =[];
     	$scope.events=[];
+      $scope.roomList=[];
+
+      Room.find(function(rooms){
+        $scope.roomList=rooms;
+      });
 
   	    Reservation.find({
 			  filter: {where:{status:1},order: 'date_arrival ASC' }
-			},function(data){
+			    },function(data){
   	    	$scope.reservations=data;
   	    		var events=[];
 
   	    		data.forEach(function(res){
 
-  	    			var event = {'title':res.customer_name +" " +res.customer_surname,'start':new Date(res.date_arrival),'end':new Date(res.date_arrival),'allDay':true,stick : true,};
+  	    			var event = {'title':res.customer_name +" " +res.customer_surname,
+                           'start':new Date(res.date_arrival),
+                           'end':new Date(res.date_arrival),'allDay':true,stick : true,};
 
   	    			events.push(event);
   	    		});
 
   	    		angular.copy(events, $scope.events);
-  		})
-	
-/* Change View */
-    $scope.changeView = function(view,calendar) {
-      uiCalendarConfig.calendars[calendar].fullCalendar('changeView',view);
-    };
-    /* Change View */
-    $scope.renderCalender = function(calendar) {
-      if(uiCalendarConfig.calendars[calendar]){
-        uiCalendarConfig.calendars[calendar].fullCalendar('render');
-      }
-    };
-   
-   
+  		});
+
     		$scope.eventSources = [$scope.events];
-		
+
 		$scope.uiConfig = {
 		      calendar:{
 		        height: 700,
