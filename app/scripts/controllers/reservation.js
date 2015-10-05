@@ -28,7 +28,7 @@ angular.module('bebCrmApp')
 
   	    			var event = {'title':res.customer_name +" " +res.customer_surname,
                            'start':new Date(res.date_arrival),
-                           'end':new Date(res.date_arrival),'allDay':true,stick : true,};
+                           'end':new Date(res.date_departure),'allDay':true,stick : true,};
 
   	    			events.push(event);
   	    		});

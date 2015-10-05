@@ -9,14 +9,13 @@
 angular.module('bebCrmApp')
   .directive('room', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'views/room_list.html',
       restrict: 'E',
       scope: {
         roomList: '=roomList',
         room:'=room'
       },
       controller: ['$scope', '$http', function($scope, $http) {
-
         var room_id_list = $scope.room.split(",");
         $scope.roomsInfo=[];
         room_id_list.forEach(function(room)
@@ -27,10 +26,6 @@ angular.module('bebCrmApp')
             }
           })
         });
-      }],
-      link: function postLink(scope, element, attrs) {
-        
-        element.text(scope.roomsInfo[0].name);
-      }
+      }]
     };
   });
