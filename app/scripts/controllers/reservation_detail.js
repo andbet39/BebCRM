@@ -14,9 +14,8 @@ angular.module('bebCrmApp')
     $scope.roomList=[];
     $scope.reservation={};
 
-
-    Reservation.findOne({where:{
-          id:$stateParams.id}},function(data){
+    console.log($stateParams.id);
+    Reservation.findById({id:$stateParams.id},function(data){
             console.log(data);
             $scope.reservation=data;
           });
@@ -27,4 +26,4 @@ angular.module('bebCrmApp')
     });
 
 
-  }) 
+  })

@@ -356,6 +356,32 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
       }
     })
 
+    .state('/today', {
+      url: "/today.html",
+      templateUrl: "views/today.html",
+      controller: "TodayCtrl",
+      data: {
+        pageTitle: 'Reservation page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Reservation',
+          href: '#/reservation_list.html'
+        }]
+      },
+      resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+          return $ocLazyLoad.load([{
+            name: 'conAngular',
+            serie: true,
+            insertBefore: '#ngInsertBefore',
+            files: conAssets('dataTables')
+          }]);
+        }]
+      }
+    })
+
 
 
 
