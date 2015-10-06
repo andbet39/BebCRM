@@ -2,6 +2,7 @@
 <project version="4">
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/conTemplate/tpl/angular-settings.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/conTemplate/tpl/parts/chat.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/conTemplate/tpl/parts/search-bar.html" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/conTemplate/tpl/parts/sidebar.html" charset="UTF-8" />

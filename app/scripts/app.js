@@ -149,7 +149,7 @@ window.conAssets = function(get) {
     ],
 
     dataTables: [
-      'bower_components/datatables/media/js/jquery.dataTables.min.js',
+      'conTemplate/assets/datatables/media/js/jquery.dataTables.min.js',
       'conTemplate/assets/datatables/extensions/TableTools/js/dataTables.tableTools.min.js',
       'conTemplate/assets/datatables/extensions/Scroller/js/dataTables.scroller.min.js',
       'conTemplate/assets/angularjs-dataTables/angular-datatables.js'
