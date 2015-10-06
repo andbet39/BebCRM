@@ -8,7 +8,7 @@
  * Controller of the bebCrmApp
  */
 angular.module('bebCrmApp')
-  .controller('ReservationCtrl', function (Reservation,$scope,uiCalendarConfig,Room) {
+  .controller('ReservationCtrl', function (Reservation,$scope,uiCalendarConfig,Room,$state) {
 
     	$scope.events=[];
       $scope.roomList=[];
@@ -36,7 +36,7 @@ angular.module('bebCrmApp')
 
                   var event = {'title':res.customer_name +" " +res.customer_surname,
                                'start':new Date(res.date_arrival),
-                               'end':new Date(res.date_arrival),'allDay':true,stick : true};
+                               'end':new Date(res.date_arrival),'allDay':true,stick : true,res_id:res.reservation_code};
 
                   events.push(event);
                 });
@@ -45,5 +45,22 @@ angular.module('bebCrmApp')
   	  	});
 
 
+    /* alert on eventClick */
+    $scope.alertOnEventClick = function( date, jsEvent, view){
+      $state.go('/reservation_detail',{id:date.res_id}); // go to loginconsole.log(date.res_id);
+    };
+
+    $scope.uiConfig = {
+      calendar:{
+        height: 700,
+        editable:false,
+        header:{
+          left: 'title',
+          center: '',
+          right: 'today prev,next'
+        },
+        eventClick: $scope.alertOnEventClick
+      }
+    };
 
   });

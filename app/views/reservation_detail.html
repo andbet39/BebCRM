@@ -1,7 +1,70 @@
- 
-    <div class="card-panel col l4 s12">
-      <h3>{{reservation.customer_name}} {{reservation.customer_surname}}</h3>
-      <p>Arrivo {{reservation.date_arrival | amDateFormat:'D-M-YYYY'}}</p>
-      <p>Partenza {{reservation.date_departure | amDateFormat:'D-M-YYYY'}}</p>
+<h2>{{reservation.customer_name}} {{reservation.customer_surname}}</h2>
+<div class="row">
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card indigo lighten-2 indigo-text text-lighten-5">
+      <i class="fa fa-sign-in"></i>
+      <span class="count">{{reservation.date_arrival | amDateFormat:'D-M-YYYY'}}</span>
+      <div class="name">Check-in</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card blue lighten-2 blue-text text-lighten-5">
+      <i class="fa fa-sign-out"></i>
+      <span class="count">{{reservation.date_departure | amDateFormat:'D-M-YYYY'}}</span>
+      <div class="name">Check-out</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <div class="card-panel stats-card teal lighten-2 green-text text-lighten-5">
+      <div class="progress small teal lighten-1">
+        <div class="teal darken-1" style="width: 42%"></div>
+      </div>
+
+      <i class="fa fa-eur"></i>
+      <span class="count">{{reservation.amount | currency:'€ '}}</span>
+      <div class="name">Totale</div>
     </div>
- 
+  </div>
+</div>
+<div class="row">
+  <div class="col l6 s12">
+  <div class="card-panel ">
+    <h4>Contatti</h4>
+    <p><i class="fa fa-envelope-o"></i>   {{reservation.customer_mail}}</p>
+    <p><i class="fa fa-phone"></i>   {{reservation.customer_phone}}</p>
+    <p><i class="fa fa-language"></i>   {{reservation.customer_language}}</p>
+  </div>
+    </div>
+
+  <div class="col l6 s12">
+    <div class="card-panel ">
+      <h4>Recapito</h4>
+      <p><strong>Indirizzo :</strong>  {{reservation.customer_address}}</p>
+      <p> <strong>Città :</strong>  {{reservation.customer_city}}</p>
+      <p> <strong>Nazione :</strong>  {{reservation.customer_country}}</p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col l12 s12">
+    <div class="card-panel ">
+      <h4>Note</h4>
+      {{reservation.customer_notes}}
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l12 s12">
+    <div class="card-panel ">
+      <h4>Codici</h4>
+      <p><strong>Canale :</strong>  {{reservation.id_channel}}</p>
+      <p> <strong>Codice :</strong>  {{reservation.channel_reservation_code}}</p>
+      <p> <strong>Wubook :</strong>  {{reservation.reservation_code}}</p>
+
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,5 +1,35 @@
+<h2>Prenotazioni del mese</h2>
+
+
+<div class="row">
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card indigo lighten-2 indigo-text text-lighten-5">
+      <i class="fa fa-eur"></i>
+      <span class="count">{{earnings | currency : '€ '}}</span>
+      <div class="name">Totale del mese</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card blue lighten-2 blue-text text-lighten-5">
+      <i class="fa fa-bed"></i>
+      <span class="count">{{room_nights}}</span>
+      <div class="name">Letti</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <div class="card-panel stats-card teal lighten-2 green-text text-lighten-5">
+
+      <i class="fa fa-spinner"></i>
+      <span class="count">{{average  | currency : '€ '}}</span>
+      <div class="name">Prezzo notte per persona</div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l12 s12">
+
 <div class="card-panel">
-  <h4>With Search</h4>
 
   <table datatable="ng" class="row-border hover">
    <thead>
@@ -18,9 +48,11 @@
           <td>{{res.date_departure | amDateFormat:'D-M-YYYY'}}</td>
           <td>{{res.customer_name + " "+ res.customer_surname}}</td>
           <td>{{res.customer_phone}}</td>
-          <td>{{res.amount}}</td>
+          <td>{{res.amount | currency : '€ '}}</td>
           <td>{{res.rooms}}</td>
         </tr>
     </tbody>
   </table>
+</div>
+    </div>
 </div>
