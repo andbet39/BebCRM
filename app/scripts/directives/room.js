@@ -11,23 +11,42 @@ angular.module('bebCrmApp')
     return {
       templateUrl: 'views/room_list.html',
       restrict: 'E',
-      scope: {
-        list: '=list',
-        rooms:'=rooms'
+      scope:{
+        rooms:'=',
+        list:'='
       },
+      link: function(scope, element, attr) {
 
-      controller: ['$scope', '$http', function($scope) {
-        var room_id_list = $scope.rooms.split(",");
-        $scope.roomsInfo=[];
+        var rooms;
+        var lista;
 
-        room_id_list.forEach(function(room)
-        {
-          $scope.roomList.forEach(function (r) {
-            if (r.id == room) {
-              $scope.roomsInfo.push(r);
-            }
-          });
+        scope.$watch('rooms', function(value) {
+          rooms = value;
+          update_list();
+
         });
-      }]
-    };
+
+        scope.$watch('list', function(value) {
+          lista = value;
+          update_list();
+        });
+
+        function update_list(){
+          if(rooms) {
+            var listID = rooms.split(",");
+
+            scope.room_names = [];
+
+            listID.forEach(function (r) {
+              angular.forEach(lista, function (rmain) {
+                if (rmain.id == r) {
+                  scope.room_names.push(rmain.name);
+                }
+              })
+
+            });
+         }
+        }
+      }
+    }
   });

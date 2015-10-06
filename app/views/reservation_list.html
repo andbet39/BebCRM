@@ -39,7 +39,6 @@
     <th>Guest</th>
     <th>Phone</th>
     <th>Price</th>
-    <th>CCode</th>
     <th>Rooms</th>
    </thead>
     <tbody>
@@ -50,8 +49,8 @@
           <td>{{res.customer_name + " "+ res.customer_surname}}</td>
           <td>{{res.customer_phone}}</td>
           <td>{{res.amount | currency : '€ '}}</td>
-          <td>{{res.channel_reservation_code}}</td>
-          <td>{{res.rooms}}</td>
+          <td><room rooms="res.rooms"  list="roomList"></room>
+          </td>
         </tr>
     </tbody>
   </table>

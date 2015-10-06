@@ -1,5 +1,6 @@
 <div>
-  <p ng-repeat="r in roomsInfo track by $index">
-    {{r.name}}
-  </p>
+  <ul>
+    <li ng-repeat="room_name in room_names track by $index">{{room_name}}</li>
+  </ul>
+
 </div>
