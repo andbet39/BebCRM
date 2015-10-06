@@ -1,0 +1,68 @@
+<section id="sign-in">
+
+<form>
+  <div class="row links">
+    <div class="col s6 logo">
+      <img src="assets/_con/images/logo-white.png" alt="">
+    </div>
+    <div class="col s6 right-align"><strong>Sign In</strong> / <a href="page-sign-up.html">Sign Up</a>
+    </div>
+  </div>
+      <div class="card-panel clearfix">
+
+        <div class="row">
+          <!-- First Name -->
+          <div class="col m6 s12">
+            <div class="input-field">
+              <i class="fa fa-user prefix"></i>
+              <input ng-model="newUser.firstName" id="input_fname" type="text">
+              <label for="input_fname">First Name</label>
+            </div>
+          </div>
+          <!-- /First Name -->
+
+          <!-- Last Name -->
+          <div class="col m6 s12">
+            <div class="input-field">
+              <i class="fa fa-user prefix"></i>
+              <input ng-model="newUser.lastName" id="input_lname" type="text">
+              <label for="input_lname">Last Name</label>
+            </div>
+          </div>
+          <!-- /Last Name -->
+        </div>
+
+        <!-- Email -->
+        <div class="input-field">
+          <i class="fa fa-envelope prefix"></i>
+          <input ng-model="newUser.email" id="input_email" type="email">
+          <label for="input_email">Email</label>
+        </div>
+        <!-- /Email -->
+
+        <!-- Username -->
+        <div class="input-field">
+          <i class="fa fa-user prefix"></i>
+          <input ng-model="newUser.username" id="input_username" type="text">
+          <label for="input_username">Username</label>
+        </div>
+        <!-- /Username -->
+
+        <!-- Password -->
+        <div class="input-field">
+          <i class="fa fa-unlock-alt prefix"></i>
+          <input ng-model="newUser.password" id="input_password" type="password">
+          <label for="input_password">Password</label>
+        </div>
+        <!-- /Password -->
+
+        <p>
+          <input type="checkbox" id="checkbox_terms" />
+          <label for="checkbox_terms">I agree to the <a href="#">terms of use</a>.</label>
+        </p>
+
+        <button ng-click="signup(newUser)" class="waves-effect waves-light btn-large z-depth-0 z-depth-1-hover">Sign Up</button>
+      </div>
+
+    </form>
+</section>

@@ -55,13 +55,19 @@
 </div>
 
 <div class="row">
-  <div class="col l12 s12">
+  <div class="col l6 s12">
     <div class="card-panel ">
       <h4>Codici</h4>
       <p><strong>Canale :</strong>  {{reservation.id_channel}}</p>
       <p> <strong>Codice :</strong>  {{reservation.channel_reservation_code}}</p>
       <p> <strong>Wubook :</strong>  {{reservation.reservation_code}}</p>
 
+    </div>
+  </div>
+  <div class="col l6 s12">
+    <div class="card-panel ">
+      <h4>Camera</h4>
+     <room roomList="roomList" room="reservation.rooms"></room>{{reservation.rooms}}
     </div>
   </div>
 </div>

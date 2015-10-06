@@ -12,18 +12,18 @@ angular.module('bebCrmApp')
       templateUrl: 'views/room_list.html',
       restrict: 'E',
       scope: {
-        roomList: '=roomList',
-        room:'=room'
+        list: '=list',
+        rooms:'=rooms'
       },
+
       controller: ['$scope', '$http', function($scope) {
-        var room_id_list = $scope.room.split(",");
+        var room_id_list = $scope.rooms.split(",");
         $scope.roomsInfo=[];
-        console.log(roomList);
 
         room_id_list.forEach(function(room)
         {
           $scope.roomList.forEach(function (r) {
-            if (r.id === room) {
+            if (r.id == room) {
               $scope.roomsInfo.push(r);
             }
           });

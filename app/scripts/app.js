@@ -23,7 +23,8 @@ var conAngular = angular
      "ui.router",
   "ui.materialize",
   "oc.lazyLoad",
-  'ngSanitize'])
+  'ngSanitize'
+])
   .config(function(LoopBackResourceProvider,$httpProvider) {
  
    LoopBackResourceProvider.setUrlBase('http://localhost:3000/api');
@@ -37,7 +38,7 @@ var conAngular = angular
             LoopBackAuth.clearUser();
             LoopBackAuth.clearStorage();
             $location.nextAfterLogin = $location.path();
-            $location.path('/login');
+            $location.path('/signin.html');
           }
           return $q.reject(rejection);
         }
@@ -285,6 +286,37 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 
   // pages
   $stateProvider
+
+    .state('/signin', {
+      url: "/signin.html",
+      templateUrl: "views/page-sign-in.html",
+      controller: "AuthCtrl",
+      data: {
+        pageTitle: 'Reservation page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Login',
+          href: '#/signin.html'
+        }]
+      }
+    })
+    .state('/signup', {
+      url: "/signup.html",
+      templateUrl: "views/page-sign-up.html",
+      controller: "AuthCtrl",
+      data: {
+        pageTitle: 'Singup page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Singup',
+          href: '#/signup.html'
+        }]
+      }
+    })
 
   .state('/reservation_detail', {
       url: "/reservation_detail/:id",

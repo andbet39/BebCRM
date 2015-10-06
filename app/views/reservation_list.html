@@ -39,16 +39,18 @@
     <th>Guest</th>
     <th>Phone</th>
     <th>Price</th>
+    <th>CCode</th>
     <th>Rooms</th>
    </thead>
     <tbody>
         <tr ng-repeat="res in reservations">
           <td><a ng-href="#/reservation_detail/{{res.reservation_code}}">{{res.reservation_code}}</a></td>
-          <td>{{res.date_arrival | amDateFormat:'D-M-YYYY'}}</td>
-          <td>{{res.date_departure | amDateFormat:'D-M-YYYY'}}</td>
+          <td>{{res.date_arrival | amDateFormat:'DD/MM/YYYY'}}</td>
+          <td>{{res.date_departure | amDateFormat:'DD/MM/YYYY'}}</td>
           <td>{{res.customer_name + " "+ res.customer_surname}}</td>
           <td>{{res.customer_phone}}</td>
           <td>{{res.amount | currency : '€ '}}</td>
+          <td>{{res.channel_reservation_code}}</td>
           <td>{{res.rooms}}</td>
         </tr>
     </tbody>

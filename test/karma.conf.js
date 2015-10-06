@@ -38,6 +38,8 @@ module.exports = function(config) {
       'bower_components/angular-datatables/dist/plugins/fixedheader/angular-datatables.fixedheader.js',
       'bower_components/angular-datatables/dist/plugins/scroller/angular-datatables.scroller.js',
       'bower_components/angular-datatables/dist/plugins/tabletools/angular-datatables.tabletools.js',
+      'bower_components/api-check/dist/api-check.js',
+      'bower_components/angular-formly/dist/formly.js',
       'bower_components/moment/moment.js',
       'bower_components/angular-moment/angular-moment.js',
       'bower_components/angular-resource/angular-resource.js',
