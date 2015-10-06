@@ -385,7 +385,16 @@ module.exports = function (grunt) {
         html: ['<%= yeoman.dist %>/*.html']
       }
     },
-
+    copytemp:{
+      dist:{
+        files: {
+          cwd: '<%= yeoman.app %>',  // set working folder / root to copy
+          src: 'conTemplate/**/*',           // copy all files and subfolders
+          dest: '<%= yeoman.dist %>',    // destination folder
+          expand: true           // required when using cwd
+        }
+      }
+    },
     // Copies remaining files to places other tasks can use
     copy: {
       dist: {
@@ -485,6 +494,7 @@ module.exports = function (grunt) {
     'ngtemplates',
     'concat',
     'ngAnnotate',
+    'copytemp:dist',
     'copy:dist',
     'cdnify',
     'cssmin',
