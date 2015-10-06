@@ -64,124 +64,124 @@ var conAngular = angular
  */
 window.conAssets = function(get) {
   var list = {
-    simpleWeather: ['assets/simpleWeather/jquery.simpleWeather.min.js'],
+    simpleWeather: ['conTemplate/assets/simpleWeather/jquery.simpleWeather.min.js'],
 
     sparkline: [
-      'assets/sparkline/jquery.sparkline.min.js',
-      'assets/angularjs-sparkline/angularjs.sparkline.js'
+      'conTemplate/assets/sparkline/jquery.sparkline.min.js',
+      'conTemplate/assets/angularjs-sparkline/angularjs.sparkline.js'
     ],
 
     flot: [
-      'assets/flot/jquery.flot.min.js',
-      'assets/flot/jquery.flot.time.min.js',
-      'assets/flot/jquery.flot.pie.min.js',
-      'assets/flot/jquery.flot.tooltip.min.js',
-      'assets/flot/jquery.flot.categories.min.js',
-      'assets/angularjs-flot/angular-flot.js'
+      'conTemplate/assets/flot/jquery.flot.min.js',
+      'conTemplate/assets/flot/jquery.flot.time.min.js',
+      'conTemplate/assets/flot/jquery.flot.pie.min.js',
+      'conTemplate/assets/flot/jquery.flot.tooltip.min.js',
+      'conTemplate/assets/flot/jquery.flot.categories.min.js',
+      'conTemplate/assets/angularjs-flot/angular-flot.js'
     ],
 
     nvd3: [
-      'assets/d3/d3.min.js',
-      'assets/nvd3/nv.d3.min.css',
-      'assets/nvd3/nv.d3.min.js',
-      'assets/angularjs-nvd3/angular-nvd3.min.js'
+      'conTemplate/assets/d3/d3.min.js',
+      'conTemplate/assets/nvd3/nv.d3.min.css',
+      'conTemplate/assets/nvd3/nv.d3.min.js',
+      'conTemplate/assets/angularjs-nvd3/angular-nvd3.min.js'
     ],
 
     rickshaw: [
-      'assets/d3/d3.min.js',
-      'assets/rickshaw/rickshaw.min.css',
-      'assets/rickshaw/rickshaw.min.js',
-      'assets/angularjs-rickshaw/rickshaw-angularjs.js'
+      'conTemplate/assets/d3/d3.min.js',
+      'conTemplate/assets/rickshaw/rickshaw.min.css',
+      'conTemplate/assets/rickshaw/rickshaw.min.js',
+      'conTemplate/assets/angularjs-rickshaw/rickshaw-angularjs.js'
     ],
 
     markitup: [
-      'assets/markitup/skins/_con/style.css',
-      'assets/markitup/sets/default/style.css',
-      'assets/markitup/sets/default/set.js',
-      'assets/markitup/jquery.markitup.js'
+      'conTemplate/assets/markitup/skins/_con/style.css',
+      'conTemplate/assets/markitup/sets/default/style.css',
+      'conTemplate/assets/markitup/sets/default/set.js',
+      'conTemplate/assets/markitup/jquery.markitup.js'
     ],
 
-    ckeditor: ['assets/ckeditor/ckeditor.js'],
+    ckeditor: ['conTemplate/assets/ckeditor/ckeditor.js'],
 
     select2: [
-      'assets/select2/css/select2.min.css',
-      'assets/select2/js/select2.full.min.js'
+      'conTemplate/assets/select2/css/select2.min.css',
+      'conTemplate/assets/select2/js/select2.full.min.js'
     ],
 
     tagsinput: [
-      'assets/jquery-tags-input/jquery.tagsinput.css',
-      'assets/jquery-tags-input/jquery.tagsinput.js'
+      'conTemplate/assets/jquery-tags-input/jquery.tagsinput.css',
+      'conTemplate/assets/jquery-tags-input/jquery.tagsinput.js'
     ],
 
     dropzone: [
-      'assets/dropzone/dropzone.min.css',
-      'assets/dropzone/dropzone.min.js'
+      'conTemplate/assets/dropzone/dropzone.min.css',
+      'conTemplate/assets/dropzone/dropzone.min.js'
     ],
 
     clockpicker:[
-      'assets/jquery-clockpicker/jquery-clockpicker.min.css',
-      'assets/jquery-clockpicker/jquery-clockpicker.min.js'
+      'conTemplate/assets/jquery-clockpicker/jquery-clockpicker.min.css',
+      'conTemplate/assets/jquery-clockpicker/jquery-clockpicker.min.js'
     ],
 
     pikaday: [
-      'assets/pikaday/pikaday.css',
-      'assets/pikaday/pikaday.js',
-      'assets/pikaday/pikaday.jquery.js'
+      'conTemplate/assets/pikaday/pikaday.css',
+      'conTemplate/assets/pikaday/pikaday.js',
+      'conTemplate/assets/pikaday/pikaday.jquery.js'
     ],
 
     spectrum: [
-      'assets/spectrum/spectrum.css',
-      'assets/spectrum/spectrum.js'
+      'conTemplate/assets/spectrum/spectrum.css',
+      'conTemplate/assets/spectrum/spectrum.js'
     ],
 
-    inputmask: ['assets/jquery-input-mask/jquery.inputmask.bundle.min.js'],
+    inputmask: ['conTemplate/assets/jquery-input-mask/jquery.inputmask.bundle.min.js'],
 
-    parsley: ['assets/parsley/parsley.min.js'],
+    parsley: ['conTemplate/assets/parsley/parsley.min.js'],
 
-    gmaps: ['assets/gmaps/gmaps.min.js'],
+    gmaps: ['conTemplate/assets/gmaps/gmaps.min.js'],
 
     jvectormap: [
-      'assets/jquery-jvectormap/jquery-jvectormap.css',
-      'assets/jquery-jvectormap/jquery-jvectormap.min.js',
-      'assets/jquery-jvectormap/jquery-jvectormap-world-mill-en.js',
-      'assets/jquery-jvectormap/gdp-data.js',
-      'assets/angulajs-jvectormap/angularjs-jvectormap.js'
+      'conTemplate/assets/jquery-jvectormap/jquery-jvectormap.css',
+      'conTemplate/assets/jquery-jvectormap/jquery-jvectormap.min.js',
+      'conTemplate/assets/jquery-jvectormap/jquery-jvectormap-world-mill-en.js',
+      'conTemplate/assets/jquery-jvectormap/gdp-data.js',
+      'conTemplate/assets/angulajs-jvectormap/angularjs-jvectormap.js'
     ],
 
     dataTables: [
       'bower_components/datatables/media/js/jquery.dataTables.min.js',
-      'assets/datatables/extensions/TableTools/js/dataTables.tableTools.min.js',
-      'assets/datatables/extensions/Scroller/js/dataTables.scroller.min.js',
-      'assets/angularjs-dataTables/angular-datatables.js'
+      'conTemplate/assets/datatables/extensions/TableTools/js/dataTables.tableTools.min.js',
+      'conTemplate/assets/datatables/extensions/Scroller/js/dataTables.scroller.min.js',
+      'conTemplate/assets/angularjs-dataTables/angular-datatables.js'
     ],
 
     /*fullcalendar: [
-      'assets/fullcalendar/fullcalendar.min.css',
-      'assets/fullcalendar/moment.min.js',
-      'assets/fullcalendar/jquery-ui.custom.min.js',
-      'assets/fullcalendar/fullcalendar.min.js'
+      'conTemplate/assets/fullcalendar/fullcalendar.min.css',
+      'conTemplate/assets/fullcalendar/moment.min.js',
+      'conTemplate/assets/fullcalendar/jquery-ui.custom.min.js',
+      'conTemplate/assets/fullcalendar/fullcalendar.min.js'
     ],*/
 
-    sortable: ['assets/sortable/Sortable.min.js'],
+    sortable: ['conTemplate/assets/sortable/Sortable.min.js'],
 
-    wowjs: ['assets/wow.js/wow.min.js'],
+    wowjs: ['conTemplate/assets/wow.js/wow.min.js'],
 
-    animatecss: ['assets/animate.css/animate.css'],
+    animatecss: ['conTemplate/assets/animate.css/animate.css'],
 
     photoswipe: [
-      'assets/PhotoSwipe/photoswipe.css',
-      'assets/PhotoSwipe/default-skin/default-skin.css',
-      'assets/PhotoSwipe/photoswipe.min.js',
-      'assets/PhotoSwipe/photoswipe-ui-default.min.js'
+      'conTemplate/assets/PhotoSwipe/photoswipe.css',
+      'conTemplate/assets/PhotoSwipe/default-skin/default-skin.css',
+      'conTemplate/assets/PhotoSwipe/photoswipe.min.js',
+      'conTemplate/assets/PhotoSwipe/photoswipe-ui-default.min.js'
     ],
 
-    isotope: ['assets/isotope/isotope.pkgd.min.js'],
+    isotope: ['conTemplate/assets/isotope/isotope.pkgd.min.js'],
 
     videojs: [
-      'assets/video.js/video-js.css',
-      'assets/video.js/video.js',
-      'assets/video.js/plugins/vjs.youtube.js',
-      'assets/video.js/plugins/media.vimeo.js'
+      'conTemplate/assets/video.js/video-js.css',
+      'conTemplate/assets/video.js/video.js',
+      'conTemplate/assets/video.js/plugins/vjs.youtube.js',
+      'conTemplate/assets/video.js/plugins/media.vimeo.js'
     ]
   };
 
@@ -420,7 +420,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Dashboard
     .state('/dashboard', {
       url: "/dashboard.html",
-      templateUrl: "tpl/dashboard.html",
+      templateUrl: "conTemplate/tpl/dashboard.html",
       controller: "DashboardController",
       data: {
         pageTitle: 'Admin Dashboard with Material Design',
@@ -451,7 +451,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Dashboard v1
     .state('/dashboard-v1', {
       url: "/dashboard-v1.html",
-      templateUrl: "tpl/dashboard-v1.html",
+      templateUrl: "conTemplate/tpl/dashboard-v1.html",
       controller: "DashboardV1Controller",
       data: {
         pageTitle: 'Dashboard v1',
@@ -482,7 +482,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Angular Options
     .state('/angular-settings', {
       url: "/angular-settings.html",
-      templateUrl: "tpl/angular-settings.html",
+      templateUrl: "conTemplate/tpl/angular-settings.html",
       controller: "PageController",
       data: {
         pageTitle: 'Angular Settings',
@@ -499,7 +499,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Widgets
     .state('/widgets', {
       url: "/widgets.html",
-      templateUrl: "tpl/widgets.html",
+      templateUrl: "conTemplate/tpl/widgets.html",
       controller: "PageController",
       data: {
         pageTitle: 'Widgets',
@@ -528,7 +528,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Forms Base
     .state('/forms-base', {
       url: "/forms-base.html",
-      templateUrl: "tpl/forms-base.html",
+      templateUrl: "conTemplate/tpl/forms-base.html",
       controller: "PageController",
       data: {
         pageTitle: 'Base Forms',
@@ -551,7 +551,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Forms Advanced
     .state('/forms-advanced', {
       url: "/forms-advanced.html",
-      templateUrl: "tpl/forms-advanced.html",
+      templateUrl: "conTemplate/tpl/forms-advanced.html",
       controller: "PageController",
       data: {
         pageTitle: 'Advanced Forms',
@@ -588,7 +588,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Forms Validation
     .state('/forms-validation', {
       url: "/forms-validation.html",
-      templateUrl: "tpl/forms-validation.html",
+      templateUrl: "conTemplate/tpl/forms-validation.html",
       controller: "PageController",
       data: {
         pageTitle: 'Forms Validation',
@@ -620,7 +620,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Forms Editors
     .state('/forms-editors', {
       url: "/forms-editors.html",
-      templateUrl: "tpl/forms-editors.html",
+      templateUrl: "conTemplate/tpl/forms-editors.html",
       controller: "PageController",
       data: {
         pageTitle: 'Editors',
@@ -652,7 +652,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Mail Inbox
     .state('/mail-inbox', {
       url: "/mail-inbox.html",
-      templateUrl: "tpl/mail-inbox.html",
+      templateUrl: "conTemplate/tpl/mail-inbox.html",
       controller: "PageController",
       data: {
         pageTitle: 'Mail Inbox',
@@ -675,7 +675,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Mail View
     .state('/mail-view', {
       url: "/mail-view.html",
-      templateUrl: "tpl/mail-view.html",
+      templateUrl: "conTemplate/tpl/mail-view.html",
       controller: "PageController",
       data: {
         pageTitle: 'Mail View',
@@ -698,7 +698,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Mail Compose
     .state('/mail-compose', {
       url: "/mail-compose.html",
-      templateUrl: "tpl/mail-compose.html",
+      templateUrl: "conTemplate/tpl/mail-compose.html",
       controller: "PageController",
       data: {
         pageTitle: 'Mail Compose',
@@ -730,7 +730,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Charts Flot
     .state('/charts-flot', {
       url: "/charts-flot.html",
-      templateUrl: "tpl/charts-flot.html",
+      templateUrl: "conTemplate/tpl/charts-flot.html",
       controller: "ChartFlotController",
       data: {
         pageTitle: 'Flot Charts',
@@ -763,7 +763,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Charts NVD3
     .state('/charts-nvd3', {
       url: "/charts-nvd3.html",
-      templateUrl: "tpl/charts-nvd3.html",
+      templateUrl: "conTemplate/tpl/charts-nvd3.html",
       controller: "ChartNVD3Controller",
       data: {
         pageTitle: 'NVD3 Charts',
@@ -796,7 +796,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Charts Rickshaw
     .state('/charts-rickshaw', {
       url: "/charts-rickshaw.html",
-      templateUrl: "tpl/charts-rickshaw.html",
+      templateUrl: "conTemplate/tpl/charts-rickshaw.html",
       controller: "ChartRickshawController",
       data: {
         pageTitle: 'Rickshaw Charts',
@@ -829,7 +829,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Charts Sparkline
     .state('/charts-sparkline', {
       url: "/charts-sparkline.html",
-      templateUrl: "tpl/charts-sparkline.html",
+      templateUrl: "conTemplate/tpl/charts-sparkline.html",
       controller: "ChartSparkController",
       data: {
         pageTitle: 'Sparkline Charts',
@@ -862,7 +862,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Google Maps
     .state('/maps-google', {
       url: "/maps-google.html",
-      templateUrl: "tpl/maps-google.html",
+      templateUrl: "conTemplate/tpl/maps-google.html",
       controller: "PageController",
       data: {
         pageTitle: 'Google Maps',
@@ -894,7 +894,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Vector Maps
     .state('/maps-vector', {
       url: "/maps-vector.html",
-      templateUrl: "tpl/maps-vector.html",
+      templateUrl: "conTemplate/tpl/maps-vector.html",
       controller: "MapsVectorController",
       data: {
         pageTitle: 'Vector Maps',
@@ -927,7 +927,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
     // Data Tables
     .state('/data-tables', {
       url: "/data-tables.html",
-      templateUrl: "tpl/data-tables.html",
+      templateUrl: "conTemplate/tpl/data-tables.html",
       controller: "DatatablesController",
       data: {
         pageTitle: 'Data Tables',
