@@ -287,6 +287,21 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
   // pages
   $stateProvider
 
+    .state('/admin', {
+      url: "/admin.html",
+      templateUrl: "views/admin.html",
+      controller: "AdminCtrl",
+      data: {
+        pageTitle: 'Admin page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Admin',
+          href: '#/admin.html'
+        }]
+      }
+    })
     .state('/signin', {
       url: "/signin.html",
       templateUrl: "views/page-sign-in.html",

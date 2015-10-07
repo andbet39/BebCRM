@@ -10,8 +10,8 @@
 angular.module('bebCrmApp')
   .controller('ReservationCtrl', function (Reservation,$scope,uiCalendarConfig,Room,$state) {
 
-    	$scope.events=[];
-      $scope.roomList=[];
+    $scope.events=[];
+    $scope.roomList=[];
 
     var date = new Date();
     var d = date.getDate();
@@ -21,28 +21,29 @@ angular.module('bebCrmApp')
 
     $scope.eventSources = [$scope.events];
 
-        Room.find(function(rooms){
-          $scope.roomList=rooms;
-        });
+    Room.find(function(rooms){
+      $scope.roomList=rooms;
+    });
 
-  	    $scope.reservations = Reservation.find({
-			        filter: { where:{status:1,date_arrival: {between: [new Date(y,m,1),new Date(y,m+1,1)]}},order: 'date_arrival ASC' }
-			    },function(data){
-  	            $scope.reservations=	data;
 
-                var events=[];
+    $scope.reservations = Reservation.find({
+      filter: { where:{status:1,date_arrival: {between: [new Date(y,m,1),new Date(y,m+1,1)]}},order: 'date_arrival ASC' }
+    },function(data){
+      $scope.reservations=	data;
 
-                data.forEach(function(res){
+      var events=[];
 
-                  var event = {'title':res.customer_name +" " +res.customer_surname,
-                               'start':new Date(res.date_arrival),
-                               'end':new Date(res.date_arrival),'allDay':true,stick : true,res_id:res.reservation_code};
+      data.forEach(function(res){
 
-                  events.push(event);
-                });
+        var event = {'title':res.customer_name +" " +res.customer_surname,
+          'start':new Date(res.date_arrival),
+          'end':new Date(res.date_arrival),'allDay':true,stick : true,res_id:res.reservation_code};
 
-                angular.copy(events, $scope.events);
-  	  	});
+        events.push(event);
+      });
+
+      angular.copy(events, $scope.events);
+    });
 
 
     /* alert on eventClick */

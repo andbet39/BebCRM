@@ -1,0 +1,38 @@
+<form>
+<div class="row">
+  <div class="col m9">
+    <div class="card-panel">
+      <div class="input-field col s6">
+        <select  class="browser-default"   ng-model="selectedmonth">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="0">Gennaio</option>
+          <option value="1">Febbraio</option>
+          <option value="2">Marzo</option>
+          <option value="3">Aprile</option>
+          <option value="4">Maggio</option>
+          <option value="5">Giugno</option>
+          <option value="6">Luglio</option>
+          <option value="7">Agosto</option>
+          <option value="8">Settembre</option>
+          <option value="9">Ottobre</option>
+          <option value="10">Novembre</option>
+          <option value="11">Dicembre</option>
+        </select>
+      </div>
+
+      <div class="input-field col s6">
+        <select  class="browser-default"   ng-model="selectedyear">
+          <option value="" disabled selected>Choose your option</option>
+          <option value="2015">2015</option>
+          <option value="2016">2016</option>
+          <option value="2017">2017</option>
+          <option value="2018">2018</option>
+        </select>
+      </div>
+      <button ng-click="fnclick()" class="waves-effect waves-light btn">Reload</button>
+
+    </div>
+  </div>
+</div>
+
+</form>
