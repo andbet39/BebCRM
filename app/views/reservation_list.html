@@ -27,20 +27,18 @@
 
 <div class="row">
   <div class="col l12 s12">
-
-<div class="card-panel">
-
-  <table datatable="ng" class="row-border hover">
-   <thead>
-    <th></th>
-    <th>Check-in</th>
-    <th>Check-out</th>
-    <th>Guest</th>
-    <th>Phone</th>
-    <th>Price</th>
-    <th>Rooms</th>
-   </thead>
-    <tbody>
+    <div class="card-panel">
+      <table datatable="ng" class="row-border hover">
+        <thead>
+        <th></th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Guest</th>
+        <th>Phone</th>
+        <th>Price</th>
+        <th>Rooms</th>
+        </thead>
+        <tbody>
         <tr ng-repeat="res in reservations">
           <td><a ng-href="#/reservation_detail/{{res.reservation_code}}">{{res.reservation_code}}</a></td>
           <td>{{res.date_arrival | amDateFormat:'DD/MM/YYYY'}}</td>
@@ -51,8 +49,8 @@
           <td><room rooms="res.rooms"  list="roomList"></room>
           </td>
         </tr>
-    </tbody>
-  </table>
-</div>
+        </tbody>
+      </table>
     </div>
+  </div>
 </div>

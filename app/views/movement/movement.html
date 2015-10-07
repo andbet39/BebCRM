@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col l12 s12">
+    <div class="card-panel">
+      <table datatable="ng" class="row-border hover">
+        <thead>
+        <th>Paid on</th>
+        <th>Reason</th>
+        <th>Amount</th>
+        <th>Account</th>
+        </thead>
+        <tbody>
+        <tr ng-repeat="mov in movements">
+          <td>{{mov.payment_date | amDateFormat:'DD/MM/YYYY'}}</td>
+          <td>{{mov.reason}}</td>
+          <td>{{mov.amount}}</td>
+          <td>{{mov.accountId}}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col l12 s12">
+    <div class="card-panel">
+      <form class="col s12">
+        <div class="row">
+          <button ng-click="importCSV(csv)" class="waves-effect waves-light btn">Load</button>
+
+          <div class="input-field col s12">
+            <textarea ng-model ="csv" id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1">Textarea</label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

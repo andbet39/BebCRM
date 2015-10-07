@@ -286,7 +286,32 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
 
   // pages
   $stateProvider
-
+    .state('/movement', {
+      url: "/movement.html",
+      templateUrl: "views/movement/movement.html",
+      controller: "MovementCtrl",
+      data: {
+        pageTitle: 'Admin page',
+        crumbs: [{
+          title: '<i class="fa fa-home"></i> Home',
+          href: '#'
+        }, {
+          title: 'Admin',
+          href: '#/admin.html'
+        }]
+      },
+      resolve: {
+        deps: ['$ocLazyLoad', function($ocLazyLoad) {
+          return $ocLazyLoad.load([{
+            name: 'conAngular',
+            serie: true,
+            insertBefore: '#ngInsertBefore',
+            files: conAssets('dataTables')
+          }]);
+        }]
+      }
+    })
+    
     .state('/admin', {
       url: "/admin.html",
       templateUrl: "views/admin.html",
