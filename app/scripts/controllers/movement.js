@@ -11,6 +11,12 @@ angular.module('bebCrmApp')
   .controller('MovementCtrl', function ($scope,Movement,Auth) {
 
     $scope.preview=[];
+    $scope.movements=[];
+
+    var date =  new Date();
+    $scope.month = date.getMonth();
+    $scope.year= date.getFullYear();
+
 
     $scope.importCSV =  function(csv){
       console.log("Start import");
@@ -19,10 +25,31 @@ angular.module('bebCrmApp')
     };
 
 
-    $scope.movements = Movement.find(function(data){
+    $scope.getAll= function() {
+       Movement.find(function (data) {
 
-      $scope.movements = data;
-    });
+        $scope.movements = data;
+
+        $scope.totaleCassa = 0;
+        $scope.totaleBanca = 0;
+        $scope.totaleCash = 0;
+
+        $scope.movements.forEach(function (mov) {
+          if (mov.accountId == '2') {
+            $scope.totaleCash += parseFloat(mov.amount);
+          }
+          if (mov.accountId == '1') {
+            $scope.totaleBanca += parseFloat(mov.amount);
+          }
+
+          $scope.totaleCassa += parseFloat(mov.amount);
+        });
+
+
+      });
+    };
+
+    $scope.getAll();
 
     function processData(allText) {
       var allTextLines = allText.split(/\r\n|\n/);
@@ -57,5 +84,33 @@ angular.module('bebCrmApp')
       });
 
     }
+
+    $scope.changeMonth = function(){
+      Movement.find({
+        filter: {
+          where:{
+            payment_date: {between: [new Date(parseInt($scope.year),parseInt($scope.month),1),
+                  new Date(parseInt($scope.year),parseInt($scope.month)+1,1)]}},
+          order: 'paid_on ASC' }}).$promise.then(function(data) {
+
+          $scope.movements = data;
+
+          $scope.totaleCassa=0;
+          $scope.totaleBanca=0;
+          $scope.totaleCash=0;
+
+          $scope.movements.forEach(function(mov){
+            if(mov.accountId=='2'){
+              $scope.totaleCash +=parseFloat(mov.amount);
+            }
+            if(mov.accountId=='1'){
+              $scope.totaleBanca +=parseFloat(mov.amount);
+            }
+
+            $scope.totaleCassa +=parseFloat(mov.amount);
+          });
+
+        });
+    };
 
   });

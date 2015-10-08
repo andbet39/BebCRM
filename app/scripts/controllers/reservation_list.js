@@ -27,11 +27,15 @@ angular.module('bebCrmApp')
       console.log("Fetching reservation for" + $scope.month + " Anno" +$scope.year);
 
       Reservation.find({
-        filter: { where:{
-          status:1,
-          date_arrival: {between: [new Date(parseInt($scope.year),parseInt($scope.month),1),
-                                   new Date(parseInt($scope.year),parseInt($scope.month)+1,1)]}},
+        filter: {
+          where:{
+            and:
+              [{or:[{status: '1'}, {status: '4'}]},//or:[{status: '1'}, {status: '4'}],
+                {date_arrival: {between: [new Date(parseInt($scope.year),parseInt($scope.month),1),
+                  new Date(parseInt($scope.year),parseInt($scope.month)+1,1)]}}]
+          },
           order: 'date_arrival ASC' }}).$promise.then(function(data) {
+
           $scope.reservations=data;
 
           $scope.reservations.forEach(function(res){
@@ -48,10 +52,13 @@ angular.module('bebCrmApp')
     $scope.changeMonth = function(){
       console.log("Fetching reservation for" + $scope.month + " Anno" +$scope.year);
       Reservation.find({
-        filter: { where:{
-          status:1,
-          date_arrival: {between: [new Date(parseInt($scope.year),parseInt($scope.month),1),
-                                   new Date(parseInt($scope.year),parseInt($scope.month)+1,1)]}},
+        filter: {
+          where:{
+            and:
+              [{or:[{status: '1'}, {status: '4'}]},//or:[{status: '1'}, {status: '4'}],
+                {date_arrival: {between: [new Date(parseInt($scope.year),parseInt($scope.month),1),
+                  new Date(parseInt($scope.year),parseInt($scope.month)+1,1)]}}]
+          },
           order: 'date_arrival ASC' }}).$promise.then(function(data) {
 
           $scope.reservations=[];

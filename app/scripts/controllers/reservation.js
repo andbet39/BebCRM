@@ -27,7 +27,13 @@ angular.module('bebCrmApp')
 
 
     $scope.reservations = Reservation.find({
-      filter: { where:{status:1,date_arrival: {between: [new Date(y-1,m,d),new Date(y+1,m,d)]}}}
+      filter: {
+          where:{
+             and:
+                [{or:[{status: '1'}, {status: '4'}]},//or:[{status: '1'}, {status: '4'}],
+                 {date_arrival: {between: [new Date(y-1,m,d),new Date(y+1,m,d)]}}]
+          }
+      }
     },function(data){
       $scope.reservations=	data;
 

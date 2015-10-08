@@ -1,18 +1,45 @@
+
+<div class="row">
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card indigo lighten-2 indigo-text text-lighten-5">
+      <i class="fa fa-eur"></i>
+      <span class="count">{{totaleCassa | currency : '€ '}}</span>
+      <div class="name">Totale</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <a href="#" class="card-panel stats-card blue lighten-2 blue-text text-lighten-5">
+      <i class="fa fa-bed"></i>
+      <span class="count">{{totaleCash  | currency : '€ '}}</span>
+      <div class="name">Cash</div>
+    </a>
+  </div>
+  <div class="col l4 s12">
+    <div class="card-panel stats-card teal lighten-2 green-text text-lighten-5">
+
+      <i class="fa fa-spinner"></i>
+      <span class="count">{{totaleBanca | currency : '€ '}}</span>
+      <div class="name">Banca</div>
+    </div>
+  </div>
+</div>
+<month-select selectedmonth="month" selectedyear="year" fnclick="changeMonth()" rnclick="getAll()"></month-select>
+
 <div class="row">
   <div class="col l12 s12">
     <div class="card-panel">
-      <table datatable="ng" class="row-border hover">
+      <table datatable="ng" class="responsive-table striped">
         <thead>
         <th>Paid on</th>
-        <th>Reason</th>
+         <th>Reason</th>
         <th>Amount</th>
         <th>Account</th>
         </thead>
         <tbody>
         <tr ng-repeat="mov in movements">
           <td>{{mov.payment_date | amDateFormat:'DD/MM/YYYY'}}</td>
-          <td>{{mov.reason}}</td>
-          <td>{{mov.amount}}</td>
+           <td>{{mov.reason}}</td>
+          <td>{{mov.amount  | currency : '€ '}}</td>
           <td>{{mov.accountId}}</td>
         </tr>
         </tbody>

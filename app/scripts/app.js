@@ -311,7 +311,7 @@ conAngular.config(['$stateProvider', '$urlRouterProvider', function($stateProvid
         }]
       }
     })
-    
+
     .state('/admin', {
       url: "/admin.html",
       templateUrl: "views/admin.html",

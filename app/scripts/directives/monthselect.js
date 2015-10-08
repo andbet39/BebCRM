@@ -13,7 +13,8 @@ angular.module('bebCrmApp')
       scope:{
         selectedmonth : '=',
         selectedyear : '=',
-        fnclick :'&'
+        fnclick :'&',
+        rnclick :'&'
       },
       restrict: 'E'
     };
